@@ -83,11 +83,11 @@ ol {
   align-items: start;
 }
 
-/* Сбрасываем дефолтный стиль у поисковой формы*/
+/* Сбрасываем дефолтный стиль поисковой формы */
 .search-form__fieldset {
   border: 0;
 }
-/* Задаём внешний вид тексту в загаловке поисковой формы */
+/* Задаём внешний вид заголовкам "Город" и "Время суток" */
 .search-form__fieldset-title {
   margin-bottom: 5px;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -103,6 +103,7 @@ ol {
   cursor: pointer;
 }
 
+/* Стиль для текста у чекбоксов */
 .search-form__label-text {
   color: #fff;
   font-weight: 400;
@@ -118,9 +119,10 @@ ol {
 /* Подчеркивание ТЕКСТА в лейбле при наведении на ЛЕЙБЛ мышкой */
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
+  text-underline-offset: 1px;
 }
 
-/* Стиль текста "Санкт-Петербург, например" */
+/* Стиль поля текста "Санкт-Петербург, например" */
 .search-form__textfield {
   appearance: none;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -142,7 +144,7 @@ ol {
   outline: 0;
 }
 
-/* Выравниваем чек-боксы утро-день-ночь в одну линию по горизонтали */
+/* Выравниваем чекбоксы утро-день-ночь в одну линию по горизонтали */
 .search-form__checkbox-list {
   display: flex;
   align-items: center;
@@ -161,7 +163,7 @@ ol {
 
 /* Состояние ПсевдоЧекбокса :before (для выбора), сплошной белый квадратик*/
 .search-form__pseudo-checkbox::before {
-  content: "";
+  content: "\00A0"; /*неразрывный пробел вместо пустой строки*/
   display: none;
   width: 15px;
   height: 15px;
@@ -233,7 +235,7 @@ ol {
 
 /* Заголовок "ПО-СМОТРИ В ОКНО */
 .title {
-  padding-bottom: 26px;
+  padding-bottom: 24px;
   color: #fff;
   font-family: "Oswald", sans-serif;
   font-weight: 700;
