@@ -11,8 +11,8 @@ html {
 .page {
   display: flex;
   /*выше добавил свойство display: flex; */
-  inline-size: 1200px;
-  block-size: 100%;
+  inline-size: 1200px; /* ширина страницы, новая фишка вместо width  */
+  block-size: 100%; /* ширина страницы, новая фишка вместо height  */
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -141,7 +141,12 @@ ol {
 
 /* Сбрасываем дефолтную обводку поля "Санкт-Петербург, например" в состоянии фокуса*/
 .search-form__textfield:focus {
-  outline: 0;
+  outline: none;
+}
+
+.search-form__textfield:active {
+  border: 1px solid #fff;
+  outline: none;
 }
 
 /* Выравниваем чекбоксы утро-день-ночь в одну линию по горизонтали */
@@ -186,7 +191,7 @@ ol {
 
 /* Сбрасываем стили для кнопок в состоянии :focus */
 .button:focus {
-  outline: 0;
+  outline: none;
 }
 
 /* Состояние кнопки при наведении мышкой */
@@ -261,7 +266,7 @@ ol {
 
 /* Сбрасываю дефолтное состояние карточки в фокусе */
 .content__card-link:focus {
-  outline: 0;
+  outline: none;
 }
 
 /* Состояние карточки при наведении на неё мышкой */
