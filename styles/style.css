@@ -312,6 +312,9 @@ ol {
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 6px;
+  overflow: hidden; /* три свойства ниже заданы для того, чтобы слишком большой текст не выталкивал картинки вправо за блок*/
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Это описание городов*/
@@ -326,4 +329,5 @@ ol {
 /* Теперь текст в описании к видео занимает всё доступное пространство по ширине */
 .content__video-card-description-container {
   flex-grow: 1;
+  max-width: 201px;
 }
